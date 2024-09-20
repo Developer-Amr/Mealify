@@ -1,0 +1,619 @@
+* , *::after , *::before{
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #fff;
+    --main-color: #EEE;
+    --secondary-color: rgb(206, 18, 18);
+    --content-color: rgb(33, 37, 41);
+}
+body{
+    margin: 0;
+}
+*::selection{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+.container{
+    width: 75%;
+    margin: auto;
+}
+*{
+    scroll-behavior: smooth;
+}
+/* start navbar */
+.navbar{
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 14px 0px #0000001b;
+    z-index: 999;
+}
+.navbar .navbar-list ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+.navbar ul li a{
+    color: #7f7f90;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.navbar ul li{
+    position: relative;
+}
+.navbar ul li::after{
+    content: "";
+    background-color: var(--secondary-color);
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: all 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.navbar ul li:hover a{
+    color: var(--content-color);
+}
+.navbar .navbar-logo a{
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--content-color);
+}
+.navbar .navbar-logo a span{
+    color: var(--secondary-color);
+}
+.navbar .navbar-icon a{
+    text-decoration: none;
+    color: var(--content-color)
+}
+.navbar .navbat-icon a i{
+    font-size: 20px;
+}
+/* end navbar */
+
+/* start home */
+.home{
+    background-color: #eee;
+    height: 100vh;
+    padding: 100px 20px;
+}
+.home .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+.home-image{
+    width: 40%;
+}
+.home-image img{
+    width: 100%;
+}
+.home-content{
+    width: 50%;
+}
+.home-content h2{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 70px;
+    color: var(--content-color);
+    margin-bottom: 0;
+}
+.home-content p{
+    color: var(--content-color);
+    font-size: 17px;
+}
+.home-buttons{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.home-buttons .button1 a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.home-buttons .button2 a{
+    text-decoration: none;
+    color: var(--content-color);
+}
+.home-buttons .button1{
+    background-color: var(--secondary-color);
+    padding: 13px 20px;
+    border: none;
+    color: var(--primary-color);
+    border-radius: 0px 20px 20px 20px;
+}
+.home-buttons .button2{
+    border-color: transparent;
+    padding: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.home-buttons .button2 .icon{
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to right, var(--secondary-color) 0% 50%, transparent 50% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+}
+.home-buttons .button2 .icon::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    position: absolute;
+    border-radius: 50%;
+}
+.button2 .icon i{
+    font-size: 18px;
+    z-index: 1;
+}
+.home-buttons .button2 a:hover{
+    color: var(--secondary-color);
+}
+/* end home */
+
+/* start chefs */
+.chefs{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--primary-color);
+}
+.chefs-items{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.chefs-item{
+    width: 100%;
+    transition: all 0.5s;
+    position: relative;   
+    overflow: hidden;
+}
+.chefs-item:hover{
+    transform: scale(1.1);
+}
+.chefs-item-inner{
+    padding: 15px;
+}
+.chefs-img{
+    border: 5px var(--primary-color) solid;
+    padding: 15px;
+}
+.chefs-item-img img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.chefs h2{
+    font-size: 14px;
+    color: var(--content-color);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+.chefs .container > p{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    margin: 0;   
+    padding-bottom: 20px;
+    color: var(--content-color);
+}
+.chefs p span{
+    color: var(--secondary-color);
+}
+.chefs-item h3{
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--content-color);
+    font-family: "Inter", sans-serif;
+}
+.chefs-item span{
+    font-size: 14px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: rgb(127, 127, 144);
+}
+.chefs-item p{
+    font-size: 15px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-style: italic;
+    color: rgb(127, 127, 144);
+}
+.chefs .chef-item-icons{
+    background-color: #ffffff4d;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 5px;
+    transition: all 0.5s 0.5s;
+}
+.chefs .chef-item-icons i{
+    color: #37373f66;
+    font-size: 18px;
+}
+.chefs .chefs-item:hover .chef-item-icons{
+    right: 0;
+}
+/* end chefs */
+
+/* start gallery */
+.gallery{
+    background-color: var(--main-color);
+    text-align: center;
+    padding-bottom: 50px;
+}
+.gallery h2{
+    font-size: 14px;
+    color: var(--content-color);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding-top: 50px;
+}
+.gallery p{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    margin: 0;
+    padding-bottom: 20px;
+    color: var(--content-color);   
+}
+.gallery p span{
+    color: var(--secondary-color);
+}
+.gallery .gallery-item img{
+    width: 100%;
+}
+.gallery .gallery-item{
+    position: relative;
+    overflow: hidden;
+}
+.gallery .gallery-item .caption{
+    position: absolute;
+    top: 500%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.gallery .gallery-item:hover .caption{
+    top: 0;
+}
+.gallery .caption h2{
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Inter, sans-serif;
+    width: 100%;
+}
+.gallery .caption p{
+    color: rgb(221, 221, 221);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    width: 80%;
+}
+.gallery-items{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "pizza steaks burger"
+    "pizza steaks burger"
+    "pizza steaks burger"
+    "pizza-slices steaks chicken"
+    "pizza-slices steaks chicken"
+    "pizza-slices steaks chicken"
+    "pizza-slices steaks kebab"
+    "pizza-slices frittata kebab"
+    "pizza-slices frittata kebab"
+    ". frittata kebab"
+    ". frittata ."
+    ;
+}
+.pizza{
+    grid-area: pizza;
+}
+.steaks{
+    grid-area: steaks;
+}
+.burger{
+    grid-area: burger;
+}
+.pizza-slices{
+    grid-area: pizza-slices;
+}
+.chicken{
+    grid-area: chicken;
+}
+.kebab{
+    grid-area: kebab;
+}
+.frittata{
+    grid-area: frittata;
+}
+/* end gallery */
+
+/* start contact */
+.contact{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--primary-color);
+}
+.contact h2{
+    font-size: 14px;
+    color: var(--content-color);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    text-align: center;
+}
+.contact .container > p{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    margin: 0;   
+    padding-bottom: 20px;
+    text-align: center;
+    color: var(--content-color);
+}
+.contact .container > p span{
+    color: var(--secondary-color);
+}
+.contact .map iframe{
+    width: 100%;
+    background-color: teal;
+}
+.contact-details{
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.details-item{   
+    background-color: var(--main-color);
+    width: calc( calc(100% - 40px) / 2);
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.details-icon{
+    font-size: 18px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 100vh;
+    padding: 10px;
+    margin: 20px 10px 20px 20px;
+}
+.details-content{
+    display: flex;
+    flex-direction: column;
+}
+.details-content h3{
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--content-color);
+}
+.details-content p{
+    margin: 0;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: var(--content-color);
+}
+.details-content p span{
+    font-weight: 700;
+}
+.details-content a{
+    text-decoration: none;
+    color: var(--content-color);
+}
+.form{
+    width: 100%;
+    text-align: center;
+}
+.form .form-inputs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.form input , textarea{
+    margin: 10px 10px;
+    padding: 6px 12px;
+    border: 1px solid var(--main-color);
+}
+form button {
+    background-color: var(--secondary-color);
+    margin: auto;
+    padding: 15px 25px;
+    color: var(--main-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 100vh;
+}
+/* end contact */
+
+/* start footer */
+.footer{
+    background-image: url(../images/black-crystal.jpg);
+    background-size: 50% 50%;
+    color: white;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.footer .layer{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.footer-items{
+    display: flex;
+    width: calc(80/3);
+}
+.footer-item{
+    border: 5px solid transparent;
+}
+.footer-logo{
+    display: flex;
+    margin-top: 20px;
+}
+.footer-logo i{
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    background-color: rgb(230, 73, 99);
+    color: white;
+    border: 1px solid rgb(230, 73, 99);
+    border-radius: 50%;
+    align-self: center;
+}
+.footer-logo h2{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+.footer-logo h2 span{
+    color: var(--secondary-color);
+}
+.footer-item p{
+    margin: 0;
+}
+.footer-item .span{
+    text-align: center;
+}
+.footer-icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.footer-icons i{
+    font-size: 24px;
+}
+.footer-input{
+    width: 100%;
+    margin-top: 10px;
+}
+.footer input{
+    padding: 5px;
+    width: 60%;
+}
+.footer button{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 5px 15px;
+    border: 1px solid var(--secondary-color);
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer-quick-links{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+}
+.footer-details{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+.footer-details-item{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+.footer-details-item i{
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 22px;
+    padding: 1px;
+}
+.footer-details-item p{
+    display: inline-block;
+    font-size: 12px;
+    width: 85%;
+} 
+.footer-details-item a{
+    display: inline-block;
+    font-size: 10px;
+}
+
+
+
+@media (max-width:870px){
+    .gallery-items{
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        "pizza steaks"
+        "pizza steaks"
+        "burger steaks"
+        "pizza-slices steaks"
+        "pizza-slices chicken"
+        "pizza-slices chicken"
+        "pizza-slices chicken"
+        "pizza-slices kebab"
+        "pizza-slices kebab"
+        "frittata kebab"
+        "frittata ."
+        ;
+    }
+}
+@media (max-width:768px){
+    .navbar .navbar-icon i{
+        padding-left: 10px;
+    }
+    .home{
+        height: auto;
+    }
+    .home-image{
+        width: 100%;
+        order: 1;
+    }
+    .home-content{
+        width: 100%;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .details-item{   
+        width: 100%;
+    }
+    .gallery-items{
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+        "pizza"
+        "burger"
+        "pizza-slices"
+        "pizza-slices"
+        "pizza-slices"
+        "frittata"
+        "steaks"
+        "steaks"
+        "steaks"
+        "chicken"
+        "kebab"
+        ;
+    }
+}
